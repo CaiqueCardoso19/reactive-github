@@ -1,0 +1,17 @@
+<div class="container">
+  <header class="container__header">
+    <app-search class="search-align"></app-search>
+  </header>
+
+  <div class="container__side-bar" *ngIf="userInfo">
+    <app-user-info></app-user-info>
+  </div>
+
+  <div class="container__user-repos" *ngIf="userInfo">
+    <app-user-repos></app-user-repos>
+  </div>
+
+  <div class="container__fallback" *ngIf="!userInfo">
+    Procure algum usuário :)
+  </div>
+</div>
